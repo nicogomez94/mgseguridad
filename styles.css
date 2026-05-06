@@ -25,12 +25,18 @@
 /* ---------- Reset & Base ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  width: 100%;
+  overflow-x: hidden;
+}
 
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
   color: var(--text);
   background: var(--white);
+  width: 100%;
   overflow-x: hidden;
   line-height: 1.6;
 }
@@ -309,8 +315,10 @@ button { font-family: inherit; cursor: pointer; }
   position: relative;
   z-index: 3;
   max-width: 600px;
+  width: min(600px, calc(100% - 48px));
   padding: 60px 24px 80px;
   margin-left: max(24px, calc((100vw - 1200px) / 2 + 24px));
+  margin-right: 24px;
   animation: heroIn 1s ease both;
 }
 @keyframes heroIn {
@@ -374,16 +382,15 @@ button { font-family: inherit; cursor: pointer; }
 }
 /* Stylised silhouette placeholder using CSS */
 .hero-guard {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-45%);
-  width: 420px;
-  height: 520px;
-  background:
-    linear-gradient(to bottom, rgba(192,57,43,.08) 0%, transparent 100%);
-  clip-path: polygon(40% 0%, 60% 0%, 72% 18%, 68% 35%, 75% 40%, 80% 80%, 60% 100%, 40% 100%, 20% 80%, 26% 40%, 30% 35%, 28% 18%);
-  opacity: .35;
+position: absolute;
+    bottom: 100px;
+    left: 35%;
+    transform: translateX(-45%);
+    width: 420px;
+    height: 520px;
+    /* background: linear-gradient(to bottom, rgba(192, 57, 43, .08) 0%, transparent 100%); */
+    /* clip-path: polygon(40% 0%, 60% 0%, 72% 18%, 68% 35%, 75% 40%, 80% 80%, 60% 100%, 40% 100%, 20% 80%, 26% 40%, 30% 35%, 28% 18%); */
+    /* opacity: .35;*/
 }
 
 /* Slider buttons */
@@ -986,7 +993,12 @@ button { font-family: inherit; cursor: pointer; }
   /* Hero */
   .hero-figure   { display: none; }
   .hero-bg-text  { font-size: 55vw; right: -5%; }
-  .hero-content  { margin-left: 20px; padding: 50px 20px 100px; }
+  .hero-content  {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 50px 20px 100px;
+  }
 
   /* Feature bar */
   .feature-bar { flex-direction: column; }
@@ -1010,17 +1022,34 @@ button { font-family: inherit; cursor: pointer; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
 
-  .hero-slider-btns { bottom: 30px; }
+  .hero-slider-btns {
+    left: 20px;
+    bottom: 30px;
+  }
 
   /* Solution banner */
   .solution-icons { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 480px) {
+  .container,
+  .nav-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .sectors-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid     { grid-template-columns: 1fr; }
   .about-stats  { grid-template-columns: 1fr 1fr; }
   .hero-btns    { flex-direction: column; }
   .hero-content h1 { font-size: 1.85rem; }
+  .hero-content {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .hero-slider-btns { left: 16px; }
   .back-top { bottom: 20px; right: 16px; }
 }
