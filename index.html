@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MG Seguridad – Empresa de Seguridad Profesional</title>
+  <meta name="description" content="MG Seguridad, empresa de seguridad local, independiente y de calidad. Guardias, patrullas móviles, protección privada y más." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">
+        <div class="logo-shield">
+          <i class="fas fa-shield-halved"></i>
+          <span>MG</span>
+        </div>
+        <span class="logo-text">SEGURIDAD</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sectores">Sectores</a></li>
+        <li><a href="#por-que">¿Por qué nosotros?</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#contacto" class="btn-quote">Solicitar Cotización</a>
+        <a href="tel:+5491112345678" class="btn-call">
+          <i class="fas fa-phone"></i> Llamar Ahora
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-text" aria-hidden="true">MG</div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <span class="hero-badge">
+        <i class="fas fa-clock"></i> SERVICIOS DE SEGURIDAD 24/7
+      </span>
+      <h1>Una empresa de seguridad <span>local, independiente</span> y de calidad</h1>
+      <p>Protegemos lo que más te importa con profesionalismo, tecnología y dedicación absoluta.</p>
+      <div class="hero-btns">
+        <a href="#servicios" class="btn-primary"><i class="fas fa-shield-halved"></i> Nuestros Servicios</a>
+        <a href="#contacto" class="btn-outline">Contáctanos</a>
+      </div>
+    </div>
+
+    <div class="hero-figure" aria-hidden="true">
+      <div class="hero-guard-wrap">
+        <div class="hero-guard"><img src="test.png"></div>
+      </div>
+    </div>
+
+    <div class="hero-slider-btns">
+      <button class="slider-btn prev" id="heroPrev" aria-label="Anterior">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="slider-btn next" id="heroNext" aria-label="Siguiente">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== FEATURE BAR ===== -->
+  <div class="feature-bar">
+    <div class="feature-item">
+      <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+      <div>
+        <h4>Despacho de Emergencia</h4>
+        <p>Enviamos un guardia en menos de una hora.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+      <div>
+        <h4>Salario Justo</h4>
+        <p>Nuestros guardias están bien remunerados.</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+      <div>
+        <h4>Personal Certificado</h4>
+        <p>Certificaciones vigentes y capacitación continua.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="nosotros">
+    <div class="container">
+      <div class="about-text fade-in-left">
+        <h2>Una Empresa de Seguridad <span>de Primer Nivel</span></h2>
+        <p>MG Seguridad es un servicio de seguridad nuevo y en expansión para toda la región. Brindamos una amplia gama de servicios de seguridad para empresas e individuos.</p>
+        <p>Nuestro compromiso es garantizar la tranquilidad de nuestros clientes mediante soluciones integrales de seguridad adaptadas a sus necesidades y presupuesto.</p>
+        <a href="#servicios" class="btn-primary"><i class="fas fa-arrow-right"></i> Saber Más</a>
+      </div>
+      <div class="about-stats fade-in-right">
+        <div class="stat-box">
+          <span class="stat-num" data-target="500" data-suffix="+">0+</span>
+          <span class="stat-lbl">Clientes Satisfechos</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" data-target="10" data-suffix="+">0+</span>
+          <span class="stat-lbl">Años de Experiencia</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" data-target="120" data-suffix="+">0+</span>
+          <span class="stat-lbl">Guardias Certificados</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" data-target="365" data-suffix="">0</span>
+          <span class="stat-lbl">Días al Año</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="section-tag"><i class="fas fa-magnifying-glass"></i> ANÁLISIS DE RIESGO Y CONSULTA GRATUITA</span>
+        <h2><span>MG</span> Seguridad</h2>
+        <p>puede proveer un paquete de soluciones totales que le brinde completa tranquilidad.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="srv-card dark fade-in">
+          <i class="fas fa-car-side"></i>
+          <h3>Patrulla de Seguridad Móvil</h3>
+          <p>Una unidad de seguridad móvil que cubre rápidamente amplias áreas de vigilancia y responde a incidentes.</p>
+          <a href="#contacto" class="srv-link">Ver más <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="srv-card red fade-in">
+          <i class="fas fa-user-shield"></i>
+          <h3>Guardia de Seguridad Fija</h3>
+          <p>MG Seguridad proporciona guardias de seguridad fijos para instalaciones, edificios y eventos.</p>
+          <a href="#contacto" class="srv-link">Ver más <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="srv-card dark fade-in">
+          <i class="fas fa-lock"></i>
+          <h3>Protección Privada</h3>
+          <p>Nuestros guardias de seguridad permanentes brindan protección personalizada y discreta.</p>
+          <a href="#contacto" class="srv-link">Ver más <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="srv-card red fade-in">
+          <i class="fas fa-video"></i>
+          <h3>Vigilancia y CCTV</h3>
+          <p>Instalación y monitoreo de sistemas de videovigilancia de última generación 24/7.</p>
+          <a href="#contacto" class="srv-link">Ver más <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="srv-card dark fade-in">
+          <i class="fas fa-building-shield"></i>
+          <h3>Seguridad Corporativa</h3>
+          <p>Soluciones integrales de seguridad adaptadas para empresas, oficinas y corporaciones.</p>
+          <a href="#contacto" class="srv-link">Ver más <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="srv-card red fade-in">
+          <i class="fas fa-calendar-check"></i>
+          <h3>Seguridad para Eventos</h3>
+          <p>Control de acceso y seguridad perimetral para conciertos, eventos corporativos y más.</p>
+          <a href="#contacto" class="srv-link">Ver más <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOLUTION BANNER ===== -->
+  <section class="solution-banner">
+    <div class="container">
+      <div class="solution-inner fade-in">
+        <div class="solution-text">
+          <span class="section-tag"><i class="fas fa-chart-pie"></i> SOLUCIONES INTEGRALES</span>
+          <h2><span>MG</span> Seguridad puede proveer un paquete de soluciones totales dándole completa tranquilidad.</h2>
+          <a href="#contacto" class="btn-primary"><i class="fas fa-paper-plane"></i> Contáctanos Ahora</a>
+        </div>
+        <div class="solution-icons">
+          <div class="sol-icon"><i class="fas fa-shield-halved"></i><span>Protección</span></div>
+          <div class="sol-icon"><i class="fas fa-eye"></i><span>Vigilancia</span></div>
+          <div class="sol-icon"><i class="fas fa-headset"></i><span>Soporte</span></div>
+          <div class="sol-icon"><i class="fas fa-clock-rotate-left"></i><span>24/7</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTORS ===== -->
+  <section class="sectors" id="sectores">
+    <div class="container">
+      <div class="section-head fade-in">
+        <h2>Sectores que <span>Atendemos</span></h2>
+        <p>Brindamos soluciones de seguridad especializadas para cada industria y sector.</p>
+      </div>
+      <div class="sectors-grid">
+        <div class="sector-item fade-in"><i class="fas fa-building"></i><span>Comercial</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-industry"></i><span>Industrial</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-house"></i><span>Residencial</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-school"></i><span>Educativo</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-hospital"></i><span>Salud</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-store"></i><span>Retail</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-truck"></i><span>Transporte</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-landmark"></i><span>Gobierno</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="why-us" id="por-que">
+    <div class="container">
+      <div class="section-head fade-in">
+        <h2>¿Por Qué <span>Elegirnos?</span></h2>
+        <p>Nos diferenciamos por nuestra experiencia, tecnología y compromiso con la excelencia.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item fade-in">
+          <div class="why-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3>Experiencia Comprobada</h3>
+          <p>Más de 10 años protegiendo empresas y hogares con resultados probados.</p>
+        </div>
+        <div class="why-item fade-in">
+          <div class="why-icon"><i class="fas fa-headset"></i></div>
+          <h3>Soporte 24/7</h3>
+          <p>Disponibles las 24 horas, los 7 días de la semana, todos los días del año.</p>
+        </div>
+        <div class="why-item fade-in">
+          <div class="why-icon"><i class="fas fa-award"></i></div>
+          <h3>Personal Certificado</h3>
+          <p>Guardias capacitados y certificados por organismos oficiales y reconocidos.</p>
+        </div>
+        <div class="why-item fade-in">
+          <div class="why-icon"><i class="fas fa-microchip"></i></div>
+          <h3>Tecnología Avanzada</h3>
+          <p>Equipos y sistemas de seguridad de última generación disponibles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials" id="testimonios">
+    <div class="container">
+      <div class="section-head fade-in">
+        <h2>Lo Que Dicen <span>Nuestros Clientes</span></h2>
+        <p>La confianza de nuestros clientes es nuestro mayor logro.</p>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card fade-in">
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"MG Seguridad nos brinda una tranquilidad total. Su equipo es profesional y siempre está disponible ante cualquier situación."</p>
+          <div class="testi-author">
+            <div class="testi-avatar"><i class="fas fa-user-tie"></i></div>
+            <div>
+              <strong>Carlos Martínez</strong>
+              <span>Director General, Empresa XYZ</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card fade-in">
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Excelente servicio y respuesta inmediata ante cualquier incidente. Son los mejores del sector. Muy recomendados."</p>
+          <div class="testi-author">
+            <div class="testi-avatar"><i class="fas fa-user-tie"></i></div>
+            <div>
+              <strong>Ana González</strong>
+              <span>Administradora, Residencial Los Pinos</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card fade-in">
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"El mejor servicio de seguridad de la región. Personal capacitado, tecnología de punta y precios muy competitivos."</p>
+          <div class="testi-author">
+            <div class="testi-avatar"><i class="fas fa-user-tie"></i></div>
+            <div>
+              <strong>Roberto López</strong>
+              <span>Propietario, Centro Comercial Sur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-in-left">
+          <h2>Contáctanos</h2>
+          <p>Estamos listos para proteger lo que más importa. Solicitá una consulta gratuita hoy mismo.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <strong>Teléfono</strong>
+                <span>+54 9 11 1234-5678</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <strong>Email</strong>
+                <span>info@mgseguridad.com</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <strong>Dirección</strong>
+                <span>Av. Corrientes 1234, Buenos Aires</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <strong>Disponibilidad</strong>
+                <span>24/7 – Los 365 días del año</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form fade-in-right">
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="juan@empresa.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 0000-0000" />
+              </div>
+              <div class="form-group">
+                <label for="servicio">Tipo de Servicio</label>
+                <select id="servicio" name="servicio">
+                  <option value="">Seleccionar servicio...</option>
+                  <option>Patrulla de Seguridad Móvil</option>
+                  <option>Guardia de Seguridad Fija</option>
+                  <option>Protección Privada</option>
+                  <option>Vigilancia y CCTV</option>
+                  <option>Seguridad Corporativa</option>
+                  <option>Seguridad para Eventos</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos sobre tus necesidades de seguridad..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-w">
+              <i class="fas fa-paper-plane"></i> Enviar Mensaje
+            </button>
+            <div id="formSuccess" class="form-success" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <i class="fas fa-shield-halved"></i>
+            <span>MG SEGURIDAD</span>
+          </div>
+          <p>Empresa de seguridad profesional comprometida con la protección y tranquilidad de nuestros clientes.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Patrulla Móvil</a></li>
+            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Guardia Fija</a></li>
+            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Protección Privada</a></li>
+            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Vigilancia CCTV</a></li>
+            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Seguridad para Eventos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#nosotros"><i class="fas fa-chevron-right"></i> Nosotros</a></li>
+            <li><a href="#sectores"><i class="fas fa-chevron-right"></i> Sectores</a></li>
+            <li><a href="#por-que"><i class="fas fa-chevron-right"></i> ¿Por qué nosotros?</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Trabaja con Nosotros</a></li>
+            <li><a href="#contacto"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-contact-col">
+          <h4>Contacto Directo</h4>
+          <p><i class="fas fa-phone"></i> +54 9 11 1234-5678</p>
+          <p><i class="fas fa-envelope"></i> info@mgseguridad.com</p>
+          <p><i class="fas fa-location-dot"></i> Buenos Aires, Argentina</p>
+          <a href="#contacto" class="btn-quote-sm">Solicitar Cotización</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 MG Seguridad. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Términos y Condiciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-top" id="backTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
