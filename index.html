@@ -3,100 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MG Seguridad – Empresa de Seguridad Profesional</title>
-  <meta name="description" content="MG Seguridad, empresa de seguridad local, independiente y de calidad. Guardias, patrullas móviles, protección privada y más." />
+  <title>KOS CAP | Control, Admisión y Permanencia</title>
+  <meta name="description" content="KOS CAP brinda soluciones integrales de seguridad, prevención y protección para eventos, empresas y organizaciones." />
+  <meta name="theme-color" content="#11100f" />
+  <link rel="icon" href="assets/kos-logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- ===== NAVBAR ===== -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" aria-label="Navegación principal">
     <div class="nav-container">
-      <a href="#inicio" class="nav-logo">
-        <div class="logo-shield">
-          <i class="fas fa-shield-halved"></i>
-          <span>MG</span>
-        </div>
-        <span class="logo-text">SEGURIDAD</span>
+      <a href="#inicio" class="nav-logo" aria-label="KOS CAP, volver al inicio">
+        <img src="assets/kos-logo.png" alt="Knowledge of Services" class="brand-logo" />
+        <span class="brand-cap">CAP</span>
       </a>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#sectores">Sectores</a></li>
-        <li><a href="#por-que">¿Por qué nosotros?</a></li>
-        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#sectores">Ámbitos</a></li>
+        <li><a href="#por-que">Diferenciales</a></li>
+        <li><a href="#testimonios">Experiencia</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
 
       <div class="nav-cta">
-        <a href="#contacto" class="btn-quote">Solicitar Cotización</a>
-        <a href="tel:+5491112345678" class="btn-call">
-          <i class="fas fa-phone"></i> Llamar Ahora
+        <a href="#contacto" class="btn-quote">Solicitar Asesoramiento</a>
+        <a href="tel:+541148355679" class="btn-call">
+          <i class="fas fa-phone" aria-hidden="true"></i> 11 4835-5679
         </a>
       </div>
 
-      <button class="hamburger" id="hamburger" aria-label="Menú">
-        <i class="fas fa-bars"></i>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
     </div>
   </nav>
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="inicio">
-    <div class="hero-bg-text" aria-hidden="true">MG</div>
+    <div class="hero-bg-text" aria-hidden="true">CAP</div>
     <div class="hero-overlay" aria-hidden="true"></div>
 
     <div class="hero-content">
       <span class="hero-badge">
-        <i class="fas fa-clock"></i> SERVICIOS DE SEGURIDAD 24/7
+        <i class="fas fa-people-group" aria-hidden="true"></i> ESPECIALISTAS EN CROWD MANAGEMENT
       </span>
-      <h1>Una empresa de seguridad <span>local, independiente</span> y de calidad</h1>
-      <p>Protegemos lo que más te importa con profesionalismo, tecnología y dedicación absoluta.</p>
+      <p class="hero-kicker">Knowledge of Services</p>
+      <h1>Grandes eventos, <span>muchos desafíos.</span></h1>
+      <p>Nos ocupamos de la seguridad para que vos solo te enfoques en el éxito de tu evento.</p>
+      <div class="cap-meaning" aria-label="CAP significa Control, Admisión y Permanencia">
+        <span><strong>C</strong>ontrol</span>
+        <span><strong>A</strong>dmisión</span>
+        <span><strong>P</strong>ermanencia</span>
+      </div>
       <div class="hero-btns">
-        <a href="#servicios" class="btn-primary"><i class="fas fa-shield-halved"></i> Nuestros Servicios</a>
-        <a href="#contacto" class="btn-outline">Contáctanos</a>
+        <a href="#servicios" class="btn-primary"><i class="fas fa-shield-halved" aria-hidden="true"></i> Ver Servicios</a>
+        <a href="#contacto" class="btn-outline">Hablemos de tu evento</a>
       </div>
     </div>
 
     <div class="hero-figure" aria-hidden="true">
       <div class="hero-guard-wrap">
-        <div class="hero-guard"><img src="test.png"></div>
+        <div class="hero-guard"><img src="assets/kos-hero.jpg" alt="" /></div>
       </div>
     </div>
 
     <div class="hero-slider-btns">
-      <button class="slider-btn prev" id="heroPrev" aria-label="Anterior">
-        <i class="fas fa-chevron-left"></i>
+      <button class="slider-btn prev" id="heroPrev" aria-label="Mensaje anterior">
+        <i class="fas fa-chevron-left" aria-hidden="true"></i>
       </button>
-      <button class="slider-btn next" id="heroNext" aria-label="Siguiente">
-        <i class="fas fa-chevron-right"></i>
+      <button class="slider-btn next" id="heroNext" aria-label="Mensaje siguiente">
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
       </button>
     </div>
   </section>
 
   <!-- ===== FEATURE BAR ===== -->
-  <div class="feature-bar">
+  <div class="feature-bar" aria-label="Pilares de KOS CAP">
     <div class="feature-item">
-      <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+      <div class="feature-icon"><i class="fas fa-eye" aria-hidden="true"></i></div>
       <div>
-        <h4>Despacho de Emergencia</h4>
-        <p>Enviamos un guardia en menos de una hora.</p>
+        <h4>Control</h4>
+        <p>Supervisión operativa y prevención activa durante todo el servicio.</p>
       </div>
     </div>
     <div class="feature-item">
-      <div class="feature-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+      <div class="feature-icon"><i class="fas fa-id-card" aria-hidden="true"></i></div>
       <div>
-        <h4>Salario Justo</h4>
-        <p>Nuestros guardias están bien remunerados.</p>
+        <h4>Admisión</h4>
+        <p>Gestión ordenada de accesos, acreditaciones y flujos de ingreso.</p>
       </div>
     </div>
     <div class="feature-item">
-      <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+      <div class="feature-icon"><i class="fas fa-people-arrows" aria-hidden="true"></i></div>
       <div>
-        <h4>Personal Certificado</h4>
-        <p>Certificaciones vigentes y capacitación continua.</p>
+        <h4>Permanencia</h4>
+        <p>Cuidado de las personas y los espacios hasta finalizar cada operativo.</p>
       </div>
     </div>
   </div>
@@ -105,27 +113,28 @@
   <section class="about" id="nosotros">
     <div class="container">
       <div class="about-text fade-in-left">
-        <h2>Una Empresa de Seguridad <span>de Primer Nivel</span></h2>
-        <p>MG Seguridad es un servicio de seguridad nuevo y en expansión para toda la región. Brindamos una amplia gama de servicios de seguridad para empresas e individuos.</p>
-        <p>Nuestro compromiso es garantizar la tranquilidad de nuestros clientes mediante soluciones integrales de seguridad adaptadas a sus necesidades y presupuesto.</p>
-        <a href="#servicios" class="btn-primary"><i class="fas fa-arrow-right"></i> Saber Más</a>
+        <span class="section-tag"><i class="fas fa-hexagon-nodes" aria-hidden="true"></i> KNOWLEDGE OF SERVICES</span>
+        <h2>Aseguramos la tranquilidad de <span>personas y empresas</span></h2>
+        <p>KOS se especializa en la prevención y seguridad de eventos públicos, privados, masivos y cerrados mediante un método propio de Safety &amp; Security basado en normas internacionales NFPA, UNE y AENOR.</p>
+        <p>Combinamos planificación estratégica, profesionales capacitados y tecnología aplicada para ofrecer un servicio integral de seguridad 360°, adaptado a cada entorno y necesidad.</p>
+        <a href="#servicios" class="btn-primary"><i class="fas fa-arrow-right" aria-hidden="true"></i> Conocer Soluciones</a>
       </div>
       <div class="about-stats fade-in-right">
         <div class="stat-box">
-          <span class="stat-num" data-target="500" data-suffix="+">0+</span>
-          <span class="stat-lbl">Clientes Satisfechos</span>
+          <span class="stat-num" data-target="70" data-suffix="+">0+</span>
+          <span class="stat-lbl">Empresas que confían</span>
         </div>
         <div class="stat-box">
-          <span class="stat-num" data-target="10" data-suffix="+">0+</span>
-          <span class="stat-lbl">Años de Experiencia</span>
+          <span class="stat-num" data-target="150" data-suffix="+">0+</span>
+          <span class="stat-lbl">Eventos realizados</span>
         </div>
         <div class="stat-box">
-          <span class="stat-num" data-target="120" data-suffix="+">0+</span>
-          <span class="stat-lbl">Guardias Certificados</span>
+          <span class="stat-num" data-target="650" data-suffix="+">0+</span>
+          <span class="stat-lbl">Personas involucradas</span>
         </div>
         <div class="stat-box">
-          <span class="stat-num" data-target="365" data-suffix="">0</span>
-          <span class="stat-lbl">Días al Año</span>
+          <span class="stat-num" data-target="360" data-suffix="°">0°</span>
+          <span class="stat-lbl">Seguridad integral</span>
         </div>
       </div>
     </div>
@@ -135,66 +144,72 @@
   <section class="services" id="servicios">
     <div class="container">
       <div class="section-head fade-in">
-        <span class="section-tag"><i class="fas fa-magnifying-glass"></i> ANÁLISIS DE RIESGO Y CONSULTA GRATUITA</span>
-        <h2><span>MG</span> Seguridad</h2>
-        <p>puede proveer un paquete de soluciones totales que le brinde completa tranquilidad.</p>
+        <span class="section-tag"><i class="fas fa-shield-halved" aria-hidden="true"></i> NUESTROS SEIS PILARES</span>
+        <h2>Soluciones en <span>seguridad y prevención</span></h2>
+        <p>Planificación, tecnología y equipos capacitados para proteger personas, bienes y operaciones.</p>
       </div>
 
       <div class="services-grid">
-        <div class="srv-card dark fade-in">
-          <i class="fas fa-car-side"></i>
-          <h3>Patrulla de Seguridad Móvil</h3>
-          <p>Una unidad de seguridad móvil que cubre rápidamente amplias áreas de vigilancia y responde a incidentes.</p>
-          <a href="#contacto" class="srv-link">Ver más <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="srv-card red fade-in">
-          <i class="fas fa-user-shield"></i>
-          <h3>Guardia de Seguridad Fija</h3>
-          <p>MG Seguridad proporciona guardias de seguridad fijos para instalaciones, edificios y eventos.</p>
-          <a href="#contacto" class="srv-link">Ver más <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="srv-card dark fade-in">
-          <i class="fas fa-lock"></i>
-          <h3>Protección Privada</h3>
-          <p>Nuestros guardias de seguridad permanentes brindan protección personalizada y discreta.</p>
-          <a href="#contacto" class="srv-link">Ver más <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="srv-card red fade-in">
-          <i class="fas fa-video"></i>
-          <h3>Vigilancia y CCTV</h3>
-          <p>Instalación y monitoreo de sistemas de videovigilancia de última generación 24/7.</p>
-          <a href="#contacto" class="srv-link">Ver más <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="srv-card dark fade-in">
-          <i class="fas fa-building-shield"></i>
+        <article class="srv-card dark fade-in">
+          <span class="srv-number">01</span>
+          <i class="fas fa-building-shield" aria-hidden="true"></i>
+          <h3>Seguridad Patrimonial</h3>
+          <p>Prevención y planificación de estrategias para proteger los bienes y activos más valiosos de personas y empresas.</p>
+          <a href="#contacto" class="srv-link">Consultar <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+        <article class="srv-card red fade-in">
+          <span class="srv-number">02</span>
+          <i class="fas fa-route" aria-hidden="true"></i>
+          <h3>Traslados Seguros</h3>
+          <p>Análisis y diseño de rutas seguras según las características de cada cliente para mitigar posibles amenazas.</p>
+          <a href="#contacto" class="srv-link">Consultar <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+        <article class="srv-card dark fade-in">
+          <span class="srv-number">03</span>
+          <i class="fas fa-briefcase" aria-hidden="true"></i>
           <h3>Seguridad Corporativa</h3>
-          <p>Soluciones integrales de seguridad adaptadas para empresas, oficinas y corporaciones.</p>
-          <a href="#contacto" class="srv-link">Ver más <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="srv-card red fade-in">
-          <i class="fas fa-calendar-check"></i>
-          <h3>Seguridad para Eventos</h3>
-          <p>Control de acceso y seguridad perimetral para conciertos, eventos corporativos y más.</p>
-          <a href="#contacto" class="srv-link">Ver más <i class="fas fa-arrow-right"></i></a>
-        </div>
+          <p>Diseño y seguimiento de Security Master Plans, contingencias y resguardo de información sensible.</p>
+          <a href="#contacto" class="srv-link">Consultar <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+        <article class="srv-card red fade-in">
+          <span class="srv-number">04</span>
+          <i class="fas fa-people-group" aria-hidden="true"></i>
+          <h3>Operativos de Seguridad</h3>
+          <p>Diseño, puesta en marcha, seguimiento e informe de operativos especiales para eventos y actividades.</p>
+          <a href="#contacto" class="srv-link">Consultar <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+        <article class="srv-card dark fade-in">
+          <span class="srv-number">05</span>
+          <i class="fas fa-chart-line" aria-hidden="true"></i>
+          <h3>Análisis y Control de Riesgos</h3>
+          <p>Matrices de riesgo a medida, informes periódicos y sistemas de control orientados a la prevención.</p>
+          <a href="#contacto" class="srv-link">Consultar <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+        <article class="srv-card red fade-in">
+          <span class="srv-number">06</span>
+          <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+          <h3>Consultorías y Auditorías</h3>
+          <p>Auditorías de accesos, perímetros, protocolos y tecnología, junto con capacitación especializada.</p>
+          <a href="#contacto" class="srv-link">Consultar <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- ===== SOLUTION BANNER ===== -->
-  <section class="solution-banner">
+  <section class="solution-banner" aria-label="Método Safety and Security">
     <div class="container">
       <div class="solution-inner fade-in">
         <div class="solution-text">
-          <span class="section-tag"><i class="fas fa-chart-pie"></i> SOLUCIONES INTEGRALES</span>
-          <h2><span>MG</span> Seguridad puede proveer un paquete de soluciones totales dándole completa tranquilidad.</h2>
-          <a href="#contacto" class="btn-primary"><i class="fas fa-paper-plane"></i> Contáctanos Ahora</a>
+          <span class="section-tag"><i class="fas fa-compass-drafting" aria-hidden="true"></i> MÉTODO SAFETY &amp; SECURITY</span>
+          <h2><span>Estrategia, prevención y control.</span> Una gestión meticulosa para minimizar riesgos y cuidar cada detalle.</h2>
+          <a href="#contacto" class="btn-primary"><i class="fas fa-paper-plane" aria-hidden="true"></i> Agendar una Consulta</a>
         </div>
         <div class="solution-icons">
-          <div class="sol-icon"><i class="fas fa-shield-halved"></i><span>Protección</span></div>
-          <div class="sol-icon"><i class="fas fa-eye"></i><span>Vigilancia</span></div>
-          <div class="sol-icon"><i class="fas fa-headset"></i><span>Soporte</span></div>
-          <div class="sol-icon"><i class="fas fa-clock-rotate-left"></i><span>24/7</span></div>
+          <div class="sol-icon"><i class="fas fa-fire-extinguisher" aria-hidden="true"></i><span>NFPA</span></div>
+          <div class="sol-icon"><i class="fas fa-ruler-combined" aria-hidden="true"></i><span>UNE</span></div>
+          <div class="sol-icon"><i class="fas fa-certificate" aria-hidden="true"></i><span>AENOR</span></div>
+          <div class="sol-icon"><i class="fas fa-users-viewfinder" aria-hidden="true"></i><span>Crowd Management</span></div>
         </div>
       </div>
     </div>
@@ -204,18 +219,18 @@
   <section class="sectors" id="sectores">
     <div class="container">
       <div class="section-head fade-in">
-        <h2>Sectores que <span>Atendemos</span></h2>
-        <p>Brindamos soluciones de seguridad especializadas para cada industria y sector.</p>
+        <h2>Protección para <span>cada entorno</span></h2>
+        <p>Soluciones personalizadas para eventos, organizaciones y personas con distintas necesidades operativas.</p>
       </div>
       <div class="sectors-grid">
-        <div class="sector-item fade-in"><i class="fas fa-building"></i><span>Comercial</span></div>
-        <div class="sector-item fade-in"><i class="fas fa-industry"></i><span>Industrial</span></div>
-        <div class="sector-item fade-in"><i class="fas fa-house"></i><span>Residencial</span></div>
-        <div class="sector-item fade-in"><i class="fas fa-school"></i><span>Educativo</span></div>
-        <div class="sector-item fade-in"><i class="fas fa-hospital"></i><span>Salud</span></div>
-        <div class="sector-item fade-in"><i class="fas fa-store"></i><span>Retail</span></div>
-        <div class="sector-item fade-in"><i class="fas fa-truck"></i><span>Transporte</span></div>
-        <div class="sector-item fade-in"><i class="fas fa-landmark"></i><span>Gobierno</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-landmark" aria-hidden="true"></i><span>Eventos Públicos</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-champagne-glasses" aria-hidden="true"></i><span>Eventos Privados</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-people-group" aria-hidden="true"></i><span>Eventos Masivos</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-door-closed" aria-hidden="true"></i><span>Espacios Cerrados</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-building" aria-hidden="true"></i><span>Empresas</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-scale-balanced" aria-hidden="true"></i><span>Gobiernos</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-flag" aria-hidden="true"></i><span>Embajadas</span></div>
+        <div class="sector-item fade-in"><i class="fas fa-star" aria-hidden="true"></i><span>Artistas y Particulares</span></div>
       </div>
     </div>
   </section>
@@ -224,81 +239,70 @@
   <section class="why-us" id="por-que">
     <div class="container">
       <div class="section-head fade-in">
-        <h2>¿Por Qué <span>Elegirnos?</span></h2>
-        <p>Nos diferenciamos por nuestra experiencia, tecnología y compromiso con la excelencia.</p>
+        <h2>Valores que se vuelven <span>acción</span></h2>
+        <p>Un equipo preparado para transmitir confianza y responder con precisión en cada operativo.</p>
       </div>
       <div class="why-grid">
         <div class="why-item fade-in">
-          <div class="why-icon"><i class="fas fa-shield-halved"></i></div>
-          <h3>Experiencia Comprobada</h3>
-          <p>Más de 10 años protegiendo empresas y hogares con resultados probados.</p>
+          <div class="why-icon"><i class="fas fa-medal" aria-hidden="true"></i></div>
+          <h3>Calidad</h3>
+          <p>Procesos rigurosos y planificación consistente para brindar un servicio confiable.</p>
         </div>
         <div class="why-item fade-in">
-          <div class="why-icon"><i class="fas fa-headset"></i></div>
-          <h3>Soporte 24/7</h3>
-          <p>Disponibles las 24 horas, los 7 días de la semana, todos los días del año.</p>
+          <div class="why-icon"><i class="fas fa-handshake" aria-hidden="true"></i></div>
+          <h3>Compromiso y Responsabilidad</h3>
+          <p>Presencia profesional, formación continua y cuidado real de cada persona y recurso.</p>
         </div>
         <div class="why-item fade-in">
-          <div class="why-icon"><i class="fas fa-award"></i></div>
-          <h3>Personal Certificado</h3>
-          <p>Guardias capacitados y certificados por organismos oficiales y reconocidos.</p>
+          <div class="why-icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></div>
+          <h3>Innovación</h3>
+          <p>Análisis permanente para anticipar riesgos y mejorar cada procedimiento.</p>
         </div>
         <div class="why-item fade-in">
-          <div class="why-icon"><i class="fas fa-microchip"></i></div>
-          <h3>Tecnología Avanzada</h3>
-          <p>Equipos y sistemas de seguridad de última generación disponibles.</p>
+          <div class="why-icon"><i class="fas fa-microchip" aria-hidden="true"></i></div>
+          <h3>Tecnología Aplicada</h3>
+          <p>Herramientas técnicas y electrónicas que fortalecen la gestión integral de seguridad.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== TESTIMONIALS ===== -->
+  <!-- ===== EXPERIENCE ===== -->
   <section class="testimonials" id="testimonios">
     <div class="container">
       <div class="section-head fade-in">
-        <h2>Lo Que Dicen <span>Nuestros Clientes</span></h2>
-        <p>La confianza de nuestros clientes es nuestro mayor logro.</p>
+        <span class="section-tag"><i class="fas fa-location-dot" aria-hidden="true"></i> TRABAJOS REALIZADOS</span>
+        <h2>Experiencia que <span>nos respalda</span></h2>
+        <p>Parte de los eventos institucionales, culturales y masivos en los que participó KOS.</p>
       </div>
       <div class="testi-grid">
-        <div class="testi-card fade-in">
-          <div class="testi-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p>"MG Seguridad nos brinda una tranquilidad total. Su equipo es profesional y siempre está disponible ante cualquier situación."</p>
+        <article class="testi-card fade-in">
+          <div class="work-tag"><i class="fas fa-trophy" aria-hidden="true"></i> Evento institucional</div>
+          <h3>Ceremonia Inaugural Buenos Aires 2018</h3>
+          <p>Uno de los trabajos realizados por el equipo de Knowledge of Services.</p>
           <div class="testi-author">
-            <div class="testi-avatar"><i class="fas fa-user-tie"></i></div>
-            <div>
-              <strong>Carlos Martínez</strong>
-              <span>Director General, Empresa XYZ</span>
-            </div>
+            <div class="testi-avatar"><i class="fas fa-calendar-check" aria-hidden="true"></i></div>
+            <div><strong>Buenos Aires 2018</strong><span>Trabajo realizado</span></div>
           </div>
-        </div>
-        <div class="testi-card fade-in">
-          <div class="testi-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p>"Excelente servicio y respuesta inmediata ante cualquier incidente. Son los mejores del sector. Muy recomendados."</p>
+        </article>
+        <article class="testi-card fade-in">
+          <div class="work-tag"><i class="fas fa-music" aria-hidden="true"></i> Evento masivo</div>
+          <h3>Personal Fest 2018</h3>
+          <p>Un operativo incluido en la trayectoria de grandes eventos de Knowledge of Services.</p>
           <div class="testi-author">
-            <div class="testi-avatar"><i class="fas fa-user-tie"></i></div>
-            <div>
-              <strong>Ana González</strong>
-              <span>Administradora, Residencial Los Pinos</span>
-            </div>
+            <div class="testi-avatar"><i class="fas fa-calendar-check" aria-hidden="true"></i></div>
+            <div><strong>Personal Fest 2018</strong><span>Trabajo realizado</span></div>
           </div>
-        </div>
-        <div class="testi-card fade-in">
-          <div class="testi-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p>"El mejor servicio de seguridad de la región. Personal capacitado, tecnología de punta y precios muy competitivos."</p>
+        </article>
+        <article class="testi-card fade-in">
+          <div class="work-tag"><i class="fas fa-building-columns" aria-hidden="true"></i> Evento cultural</div>
+          <h3>La Noche de los Museos</h3>
+          <p>Una experiencia que integra el recorrido de KOS en actividades públicas y culturales.</p>
           <div class="testi-author">
-            <div class="testi-avatar"><i class="fas fa-user-tie"></i></div>
-            <div>
-              <strong>Roberto López</strong>
-              <span>Propietario, Centro Comercial Sur</span>
-            </div>
+            <div class="testi-avatar"><i class="fas fa-calendar-check" aria-hidden="true"></i></div>
+            <div><strong>La Noche de los Museos</strong><span>Trabajo realizado</span></div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -308,76 +312,65 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info fade-in-left">
-          <h2>Contáctanos</h2>
-          <p>Estamos listos para proteger lo que más importa. Solicitá una consulta gratuita hoy mismo.</p>
+          <span class="section-tag"><i class="fab fa-whatsapp" aria-hidden="true"></i> HABLEMOS</span>
+          <h2>¿Tenés dudas? <span>Conversemos.</span></h2>
+          <p>Contanos qué necesitás y nuestro equipo se pondrá en contacto para diseñar una solución a medida.</p>
           <div class="contact-items">
             <div class="contact-item">
-              <div class="ci-icon"><i class="fas fa-phone"></i></div>
-              <div>
-                <strong>Teléfono</strong>
-                <span>+54 9 11 1234-5678</span>
-              </div>
+              <div class="ci-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
+              <div><strong>Teléfono y WhatsApp</strong><a href="https://wa.me/5491148355679" target="_blank" rel="noopener noreferrer">11 4835-5679</a></div>
             </div>
             <div class="contact-item">
-              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
-              <div>
-                <strong>Email</strong>
-                <span>info@mgseguridad.com</span>
-              </div>
+              <div class="ci-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+              <div><strong>Email</strong><a href="mailto:info@knowledgeofservices.com">info@knowledgeofservices.com</a></div>
             </div>
             <div class="contact-item">
-              <div class="ci-icon"><i class="fas fa-location-dot"></i></div>
-              <div>
-                <strong>Dirección</strong>
-                <span>Av. Corrientes 1234, Buenos Aires</span>
-              </div>
+              <div class="ci-icon"><i class="fas fa-location-dot" aria-hidden="true"></i></div>
+              <div><strong>Sede CABA</strong><span>Conde 2024, Piso 1, Oficina A — Belgrano</span></div>
             </div>
             <div class="contact-item">
-              <div class="ci-icon"><i class="fas fa-clock"></i></div>
-              <div>
-                <strong>Disponibilidad</strong>
-                <span>24/7 – Los 365 días del año</span>
-              </div>
+              <div class="ci-icon"><i class="fas fa-location-dot" aria-hidden="true"></i></div>
+              <div><strong>Sede Vicente López</strong><span>Zufriategui 1555, Piso 1, Oficina A — Florida</span></div>
             </div>
           </div>
         </div>
 
         <div class="contact-form fade-in-right">
-          <form id="contactForm" novalidate>
+          <form id="contactForm">
             <div class="form-row">
               <div class="form-group">
-                <label for="nombre">Nombre Completo</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required />
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
               </div>
               <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" placeholder="juan@empresa.com" required />
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="nombre@empresa.com" autocomplete="email" required />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 0000-0000" />
+                <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 0000-0000" autocomplete="tel" />
               </div>
               <div class="form-group">
-                <label for="servicio">Tipo de Servicio</label>
+                <label for="servicio">Tipo de servicio</label>
                 <select id="servicio" name="servicio">
                   <option value="">Seleccionar servicio...</option>
-                  <option>Patrulla de Seguridad Móvil</option>
-                  <option>Guardia de Seguridad Fija</option>
-                  <option>Protección Privada</option>
-                  <option>Vigilancia y CCTV</option>
+                  <option>Seguridad Patrimonial</option>
+                  <option>Traslados Seguros</option>
                   <option>Seguridad Corporativa</option>
-                  <option>Seguridad para Eventos</option>
+                  <option>Operativos de Seguridad</option>
+                  <option>Análisis y Control de Riesgos</option>
+                  <option>Consultorías y Auditorías</option>
                 </select>
               </div>
             </div>
             <div class="form-group">
               <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos sobre tus necesidades de seguridad..." required></textarea>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos sobre el evento, espacio u operación que necesitás proteger..." required></textarea>
             </div>
             <button type="submit" class="btn-primary full-w">
-              <i class="fas fa-paper-plane"></i> Enviar Mensaje
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> Enviar consulta por WhatsApp
             </button>
             <div id="formSuccess" class="form-success" aria-live="polite"></div>
           </form>
@@ -392,55 +385,53 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <i class="fas fa-shield-halved"></i>
-            <span>MG SEGURIDAD</span>
+            <img src="assets/kos-logo.png" alt="Knowledge of Services" />
+            <span>CAP</span>
           </div>
-          <p>Empresa de seguridad profesional comprometida con la protección y tranquilidad de nuestros clientes.</p>
+          <p>Control, Admisión y Permanencia. Seguridad integral para personas, eventos y organizaciones.</p>
           <div class="social-links">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/5491148355679" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="mailto:info@knowledgeofservices.com" aria-label="Enviar un email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+            <a href="https://knowledgeofservices.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar el sitio oficial de Knowledge of Services"><i class="fas fa-globe" aria-hidden="true"></i></a>
           </div>
         </div>
 
         <div class="footer-col">
           <h4>Servicios</h4>
           <ul>
-            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Patrulla Móvil</a></li>
-            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Guardia Fija</a></li>
-            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Protección Privada</a></li>
-            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Vigilancia CCTV</a></li>
-            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Seguridad para Eventos</a></li>
+            <li><a href="#servicios"><i class="fas fa-chevron-right" aria-hidden="true"></i> Seguridad Patrimonial</a></li>
+            <li><a href="#servicios"><i class="fas fa-chevron-right" aria-hidden="true"></i> Traslados Seguros</a></li>
+            <li><a href="#servicios"><i class="fas fa-chevron-right" aria-hidden="true"></i> Seguridad Corporativa</a></li>
+            <li><a href="#servicios"><i class="fas fa-chevron-right" aria-hidden="true"></i> Operativos de Seguridad</a></li>
+            <li><a href="#servicios"><i class="fas fa-chevron-right" aria-hidden="true"></i> Análisis de Riesgos</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Empresa</h4>
           <ul>
-            <li><a href="#nosotros"><i class="fas fa-chevron-right"></i> Nosotros</a></li>
-            <li><a href="#sectores"><i class="fas fa-chevron-right"></i> Sectores</a></li>
-            <li><a href="#por-que"><i class="fas fa-chevron-right"></i> ¿Por qué nosotros?</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Trabaja con Nosotros</a></li>
-            <li><a href="#contacto"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+            <li><a href="#nosotros"><i class="fas fa-chevron-right" aria-hidden="true"></i> Nosotros</a></li>
+            <li><a href="#sectores"><i class="fas fa-chevron-right" aria-hidden="true"></i> Ámbitos</a></li>
+            <li><a href="#por-que"><i class="fas fa-chevron-right" aria-hidden="true"></i> Diferenciales</a></li>
+            <li><a href="#testimonios"><i class="fas fa-chevron-right" aria-hidden="true"></i> Experiencia</a></li>
+            <li><a href="mailto:info@knowledgeofservices.com?subject=Quiero%20sumarme%20al%20equipo"><i class="fas fa-chevron-right" aria-hidden="true"></i> Trabajá con Nosotros</a></li>
           </ul>
         </div>
 
         <div class="footer-col footer-contact-col">
           <h4>Contacto Directo</h4>
-          <p><i class="fas fa-phone"></i> +54 9 11 1234-5678</p>
-          <p><i class="fas fa-envelope"></i> info@mgseguridad.com</p>
-          <p><i class="fas fa-location-dot"></i> Buenos Aires, Argentina</p>
-          <a href="#contacto" class="btn-quote-sm">Solicitar Cotización</a>
+          <p><i class="fas fa-phone" aria-hidden="true"></i> 11 4835-5679</p>
+          <p><i class="fas fa-envelope" aria-hidden="true"></i> info@knowledgeofservices.com</p>
+          <p><i class="fas fa-location-dot" aria-hidden="true"></i> CABA y Vicente López</p>
+          <a href="#contacto" class="btn-quote-sm">Solicitar Asesoramiento</a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 MG Seguridad. Todos los derechos reservados.</p>
+        <p>&copy; 2026 KOS CAP. Todos los derechos reservados.</p>
         <div class="footer-legal">
-          <a href="#">Política de Privacidad</a>
-          <a href="#">Términos y Condiciones</a>
+          <a href="https://knowledgeofservices.com" target="_blank" rel="noopener noreferrer">Knowledge of Services</a>
+          <span>Hecho por <a href="https://zigodev.com.ar" target="_blank" rel="noopener noreferrer">zigodev</a></span>
         </div>
       </div>
     </div>
@@ -448,9 +439,10 @@
 
   <!-- ===== BACK TO TOP ===== -->
   <button class="back-top" id="backTop" aria-label="Volver arriba">
-    <i class="fas fa-chevron-up"></i>
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
   </button>
 
+  <script src="debugDefaults.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 /* ===========================================
-   MG SEGURIDAD — JavaScript
+   KOS CAP — JavaScript
    =========================================== */
 
 (function () {
@@ -126,25 +126,25 @@
   /* ---- Hero slider ---- */
   const slides = [
     {
-      badge: '<i class="fas fa-clock"></i> SERVICIOS DE SEGURIDAD 24/7',
-      title: 'Una empresa de seguridad <span>local, independiente</span> y de calidad',
-      text:  'Protegemos lo que más te importa con profesionalismo, tecnología y dedicación absoluta.'
+      badge: '<i class="fas fa-people-group" aria-hidden="true"></i> ESPECIALISTAS EN CROWD MANAGEMENT',
+      title: 'Grandes eventos, <span>muchos desafíos.</span>',
+      text:  'Nos ocupamos de la seguridad para que vos solo te enfoques en el éxito de tu evento.'
     },
     {
-      badge: '<i class="fas fa-shield-halved"></i> PROTECCIÓN TOTAL',
-      title: 'Soluciones de seguridad <span>integrales y personalizadas</span> para tu negocio',
-      text:  'Más de 10 años de experiencia protegiendo empresas e individuos en toda la región.'
+      badge: '<i class="fas fa-shield-halved" aria-hidden="true"></i> SEGURIDAD INTEGRAL 360°',
+      title: 'Tu seguridad, <span>nuestra prioridad.</span>',
+      text:  'Protección profesional para lo que más importa: tu organización, tus bienes y tu tranquilidad.'
     },
     {
-      badge: '<i class="fas fa-bolt"></i> RESPUESTA INMEDIATA',
-      title: 'Guardias de seguridad <span>disponibles</span> cuando más los necesitás',
-      text:  'Despacho de emergencia en menos de una hora, los 365 días del año, sin excepciones.'
+      badge: '<i class="fas fa-chart-line" aria-hidden="true"></i> ANÁLISIS Y CONTROL DE RIESGOS',
+      title: 'Estrategia, prevención <span>y control.</span>',
+      text:  'Análisis experto, planificación a medida y soluciones efectivas para minimizar riesgos.'
     }
   ];
 
   let currentSlide  = 0;
   const heroH1    = document.querySelector('.hero-content h1');
-  const heroP     = document.querySelector('.hero-content > p');
+  const heroP     = document.querySelector('.hero-content > p:not(.hero-kicker)');
   const heroBadge = document.querySelector('.hero-badge');
 
   const FADE_MS = 280;
@@ -183,30 +183,39 @@
   /* ---- Contact form ---- */
   const contactForm   = document.getElementById('contactForm');
   const formSuccess   = document.getElementById('formSuccess');
+  const DEBUG = new URLSearchParams(window.location.search).get('debug') === 'true';
+
+  if (DEBUG && window.KOS_CAP_DEBUG_DEFAULTS) {
+    Object.entries(window.KOS_CAP_DEBUG_DEFAULTS).forEach(([field, value]) => {
+      const input = contactForm.elements.namedItem(field);
+      if (input) input.value = value;
+    });
+  }
 
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const btn = contactForm.querySelector('button[type="submit"]');
-    const orig = btn.innerHTML;
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
 
-    btn.disabled  = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+    const data = new FormData(contactForm);
+    const message = [
+      'Hola, KOS CAP. Quiero solicitar asesoramiento.',
+      '',
+      `Nombre: ${data.get('nombre')}`,
+      `Email: ${data.get('email')}`,
+      `Teléfono: ${data.get('telefono') || 'No informado'}`,
+      `Servicio: ${data.get('servicio') || 'A definir'}`,
+      '',
+      `Consulta: ${data.get('mensaje')}`
+    ].join('\n');
 
-    // Simulate async send
-    setTimeout(() => {
-      btn.innerHTML = '<i class="fas fa-check"></i> ¡Mensaje Enviado!';
-      btn.style.background = '#27ae60';
-      formSuccess.textContent = 'Gracias por contactarnos. Nos comunicaremos a la brevedad.';
-      contactForm.reset();
-
-      setTimeout(() => {
-        btn.disabled  = false;
-        btn.innerHTML = orig;
-        btn.style.background = '';
-        formSuccess.textContent = '';
-      }, 4500);
-    }, 1200);
+    const whatsappUrl = `https://wa.me/5491148355679?text=${encodeURIComponent(message)}`;
+    const whatsappWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    if (whatsappWindow) whatsappWindow.opener = null;
+    formSuccess.textContent = 'Abrimos WhatsApp con tu consulta lista para enviar.';
   });
 
   /* ---- Back to top ---- */
