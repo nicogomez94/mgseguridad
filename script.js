@@ -143,42 +143,110 @@
   ];
 
   let currentSlide  = 0;
-  const heroH1    = document.querySelector('.hero-content h1');
-  const heroP     = document.querySelector('.hero-content > p:not(.hero-kicker)');
-  const heroBadge = document.querySelector('.hero-badge');
+  const heroH1       = document.querySelector('.hero-content h1');
+  const heroP        = document.querySelector('.hero-content > p:not(.hero-kicker)');
+  const heroBadge    = document.querySelector('.hero-badge');
+  const heroSlides   = Array.from(document.querySelectorAll('.hero-slide'));
+  const heroDots     = Array.from(document.querySelectorAll('.hero-dot'));
+  const heroCounter  = document.getElementById('heroCounter');
+  const heroPause    = document.getElementById('heroPause');
+  const heroControls = document.querySelector('.hero-slider-btns');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const FADE_MS = 280;
+  const FADE_MS = 320;
+  const SLIDE_MS = 6000;
+  let transitionTimer;
+  let autoSlide;
+  let isPaused = reduceMotion;
 
   function goToSlide(index) {
     currentSlide = (index + slides.length) % slides.length;
     const s = slides[currentSlide];
 
-    heroBadge.style.opacity = '0';
-    heroH1.style.opacity    = '0';
-    heroP.style.opacity     = '0';
+    heroSlides.forEach((slide, i) => slide.classList.toggle('active', i === currentSlide));
+    heroDots.forEach((dot, i) => {
+      const active = i === currentSlide;
+      dot.classList.toggle('active', active);
+      dot.setAttribute('aria-current', String(active));
+    });
+    heroCounter.textContent = `${String(currentSlide + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
 
-    setTimeout(() => {
+    clearTimeout(transitionTimer);
+    heroBadge.style.opacity = '0';
+    heroBadge.style.transform = 'translateY(8px)';
+    heroH1.style.opacity    = '0';
+    heroH1.style.transform  = 'translateY(8px)';
+    heroP.style.opacity     = '0';
+    heroP.style.transform   = 'translateY(8px)';
+
+    transitionTimer = setTimeout(() => {
       heroBadge.innerHTML = s.badge;
       heroH1.innerHTML    = s.title;
       heroP.textContent   = s.text;
 
       heroBadge.style.opacity = '1';
+      heroBadge.style.transform = 'translateY(0)';
       heroH1.style.opacity    = '1';
+      heroH1.style.transform  = 'translateY(0)';
       heroP.style.opacity     = '1';
+      heroP.style.transform   = 'translateY(0)';
     }, FADE_MS);
   }
 
-  document.getElementById('heroPrev').addEventListener('click', () => goToSlide(currentSlide - 1));
-  document.getElementById('heroNext').addEventListener('click', () => goToSlide(currentSlide + 1));
-
-  let autoSlide = setInterval(() => goToSlide(currentSlide + 1), 5500);
-
-  // Pause auto-slide on hover
   const hero = document.querySelector('.hero');
-  hero.addEventListener('mouseenter', () => clearInterval(autoSlide));
-  hero.addEventListener('mouseleave', () => {
-    autoSlide = setInterval(() => goToSlide(currentSlide + 1), 5500);
+
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = null;
+  }
+
+  function startAutoSlide() {
+    stopAutoSlide();
+    if (isPaused || document.hidden || heroControls.matches(':hover') || heroControls.contains(document.activeElement)) return;
+    autoSlide = setInterval(() => goToSlide(currentSlide + 1), SLIDE_MS);
+  }
+
+  function goToSlideManually(index) {
+    goToSlide(index);
+    startAutoSlide();
+  }
+
+  function updatePauseButton() {
+    const icon = heroPause.querySelector('i');
+    icon.className = isPaused ? 'fas fa-play' : 'fas fa-pause';
+    heroPause.setAttribute('aria-label', isPaused ? 'Reproducir presentación' : 'Pausar presentación');
+  }
+
+  document.getElementById('heroPrev').addEventListener('click', () => goToSlideManually(currentSlide - 1));
+  document.getElementById('heroNext').addEventListener('click', () => goToSlideManually(currentSlide + 1));
+  heroDots.forEach(dot => dot.addEventListener('click', () => goToSlideManually(Number(dot.dataset.slide))));
+
+  heroPause.addEventListener('click', () => {
+    isPaused = !isPaused;
+    updatePauseButton();
+    isPaused ? stopAutoSlide() : startAutoSlide();
   });
+
+  heroControls.addEventListener('mouseenter', stopAutoSlide);
+  heroControls.addEventListener('mouseleave', startAutoSlide);
+  heroControls.addEventListener('focusin', stopAutoSlide);
+  heroControls.addEventListener('focusout', (event) => {
+    if (!heroControls.contains(event.relatedTarget)) startAutoSlide();
+  });
+
+  let touchStartX = 0;
+  hero.addEventListener('touchstart', event => {
+    touchStartX = event.changedTouches[0].clientX;
+  }, { passive: true });
+  hero.addEventListener('touchend', event => {
+    const distance = event.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(distance) < 45) return;
+    goToSlideManually(currentSlide + (distance < 0 ? 1 : -1));
+  }, { passive: true });
+
+  document.addEventListener('visibilitychange', () => document.hidden ? stopAutoSlide() : startAutoSlide());
+  updatePauseButton();
+  startAutoSlide();
 
   /* ---- Contact form ---- */
   const contactForm   = document.getElementById('contactForm');

@@ -46,11 +46,21 @@
   </nav>
 
   <!-- ===== HERO ===== -->
-  <section class="hero" id="inicio">
-    <div class="hero-bg-text" aria-hidden="true">CAP</div>
+  <section class="hero" id="inicio" aria-roledescription="carrusel" aria-label="Presentación de KOS CAP">
+    <div class="hero-slides" aria-hidden="true">
+      <div class="hero-slide active">
+        <img src="assets/kos-hero.jpg" alt="" fetchpriority="high" />
+      </div>
+      <div class="hero-slide">
+        <img src="assets/kos-slide-crowd.jpg" alt="" />
+      </div>
+      <div class="hero-slide">
+        <img src="assets/kos-slide-event.jpg" alt="" />
+      </div>
+    </div>
     <div class="hero-overlay" aria-hidden="true"></div>
 
-    <div class="hero-content">
+    <div class="hero-content" aria-live="polite" aria-atomic="true">
       <span class="hero-badge">
         <i class="fas fa-people-group" aria-hidden="true"></i> ESPECIALISTAS EN CROWD MANAGEMENT
       </span>
@@ -68,17 +78,20 @@
       </div>
     </div>
 
-    <div class="hero-figure" aria-hidden="true">
-      <div class="hero-guard-wrap">
-        <div class="hero-guard"><img src="assets/kos-hero.jpg" alt="" /></div>
-      </div>
-    </div>
-
     <div class="hero-slider-btns">
-      <button class="slider-btn prev" id="heroPrev" aria-label="Mensaje anterior">
+      <button type="button" class="slider-btn prev" id="heroPrev" aria-label="Diapositiva anterior">
         <i class="fas fa-chevron-left" aria-hidden="true"></i>
       </button>
-      <button class="slider-btn next" id="heroNext" aria-label="Mensaje siguiente">
+      <div class="hero-dots" aria-label="Seleccionar diapositiva">
+        <button type="button" class="hero-dot active" data-slide="0" aria-label="Mostrar diapositiva 1" aria-current="true"></button>
+        <button type="button" class="hero-dot" data-slide="1" aria-label="Mostrar diapositiva 2" aria-current="false"></button>
+        <button type="button" class="hero-dot" data-slide="2" aria-label="Mostrar diapositiva 3" aria-current="false"></button>
+      </div>
+      <span class="hero-counter" id="heroCounter" aria-hidden="true">01 / 03</span>
+      <button type="button" class="slider-btn" id="heroPause" aria-label="Pausar presentación">
+        <i class="fas fa-pause" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="slider-btn next" id="heroNext" aria-label="Diapositiva siguiente">
         <i class="fas fa-chevron-right" aria-hidden="true"></i>
       </button>
     </div>
