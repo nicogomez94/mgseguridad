@@ -270,7 +270,7 @@
 
     const data = new FormData(contactForm);
     const message = [
-      'Hola, KOS CAP. Quiero solicitar asesoramiento.',
+      'Hola, KOS Control, Admisión y Permanencia SRL. Quiero solicitar asesoramiento.',
       '',
       `Nombre: ${data.get('nombre')}`,
       `Email: ${data.get('email')}`,
@@ -280,7 +280,7 @@
       `Consulta: ${data.get('mensaje')}`
     ].join('\n');
 
-    const whatsappUrl = `https://wa.me/5491148355679?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5491159921122?text=${encodeURIComponent(message)}`;
     const whatsappWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     if (whatsappWindow) whatsappWindow.opener = null;
     formSuccess.textContent = 'Abrimos WhatsApp con tu consulta lista para enviar.';
